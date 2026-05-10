@@ -85,13 +85,9 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 ## 故障排除
 
 ### 无法连接或认证失败
-* 检查 Home Assistant 主机能否访问 `http://XXX.XXX.XXX.XXX:端口号`（可在HA终端使用命令 `curl http://XXX.XXX.XXX.XXX:端口号` 测试）。
 * 确认用户名、密码、open_id 完全与抓包时一致。
 * 查看 HA 日志（配置 → 系统 → 日志），搜索 `heshan_water` 获取详细错误信息。
-
-### 数据不更新
-* 确认 Token 状态传感器显示“有效”。
-* 检查更新频率设置是否正确（如设置为每月 31 日，则无该日不更新）。
+* 检查 Home Assistant 主机能否访问 `http://XXX.XXX.XXX.XXX:端口号`（可在HA终端使用命令 `curl http://XXX.XXX.XXX.XXX:端口号` 测试）。
 
 
 
@@ -100,7 +96,6 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 ### v1.0.0
 * 🚀 自动获取 Token 功能，无需手动填写动态令牌
 * ✨ 支持灵活的数据更新频率（小时/天/周/月）
-* ✨ Token 状态监控传感器
 
 
 
