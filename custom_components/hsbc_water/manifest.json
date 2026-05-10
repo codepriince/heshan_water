@@ -3,9 +3,9 @@
   "name": "鹤山北控水务",
   "version": "1.0.0",
   "config_flow": true,
-  "documentation": "https://github.com/yourname/ha-hsbc-water",
+  "documentation": "https://github.com/codepriince/hsbc_water",
   "requirements": [],
-  "codeowners": ["@yourname"],
+  "codeowners": ["@codepriince"],
   "integration_type": "device",
   "iot_class": "cloud_polling"
 }
