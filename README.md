@@ -21,14 +21,14 @@ HA上查看抄表读数、欠费、计费水量等信息。
 ### 方法 1：HACS 安装（推荐）
 1. 打开 HACS → 集成
 2. 点击右上角 `⋮` → 自定义存储库
-3. 输入仓库地址：https://github.com/codepriince/heshan_water
+3. 输入仓库地址：https://github.com/codepriince/hsbc_water
 4. 类别选择 `集成`
 5. 搜索并安装 “鹤山北控水务”
 
 ### 方法 2：手动安装
 ```bash
 # 下载后复制到 custom_components 目录
-cp -r heshan_water ~/.homeassistant/custom_components/
+cp -r hsbc_water ~/.homeassistant/custom_components/
 ```
 
 ## 配置
@@ -38,9 +38,9 @@ cp -r heshan_water ~/.homeassistant/custom_components/
 
 | 参数 | 说明 | 抓包来源 |
 |------|------|----------|
-| `username` | 用户名 | 请求体 (`username=xxx`) |
-| `password` | 密码 | 请求体 (`password=xxx`) |
-| `open_id` | 用户唯一标识 | 请求体 (`open_id=xxx`) |
+| `username` | 用户名 | 请求体 (`/wechat/get_token`) |
+| `password` | 密码 | 请求体 (`/wechat/get_token`) |
+| `open_id` | 用户唯一标识 | 请求体 (`/wechat/getopen_id`) |
 
 > **注意：** `open_id` 是小程序分配给当前微信用户的固定 ID，更换微信账号后需要重新获取。
 
