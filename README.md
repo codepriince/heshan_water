@@ -7,7 +7,7 @@
 HA上查看抄表读数、欠费、计费水量等信息。  
   
 ## 传感器列表 
-生成如下传感器实体：户名、水表地址、本期抄表日期、上期抄表日期、本期读数、上期读数、计费水量、欠费金额、缴费状态、计费月份以及Token有效状态监控，数据是最近抄表月份的数据。
+生成如下传感器实体：户名、手机号、水表编号、用水地址、详细地址、水表状态、集成状态、本期用水量、账户余额、应缴金额、本次抄表日期、上次抄表日期、本次抄表读数、上次抄表读数、明细账单（一阶梯水费、一阶梯水价、污水处理费、垃圾处理费）数据是最近抄表月份的数据。
 
 
 ## 功能特点
@@ -51,23 +51,6 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 4. 选择数据更新频率（默认为每小时更新一次）
 5. 点击提交，集成会立即验证并抓取数据
 
-## 传感器
-
-安装后会自动创建以下传感器实体：
-
-| 传感器名称 | 实体 ID（示例） | 说明 | 单位 |
-|------------|----------------|------|------|
-| 表地址 | `sensor.he_shan_bei_kong_shui_wu_he_shan_biao_di_zhi` | 水表安装地址 | — |
-| 户名 | `sensor.he_shan_bei_kong_shui_wu_he_shan_hu_ming` | 用水户姓名 | — |
-| 欠费金额 | `sensor.he_shan_bei_kong_shui_wu_he_shan_qian_fei_jin_e` | 当前未缴纳的水费 | 元 |
-| 本期抄表日期 | `sensor.he_shan_bei_kong_shui_wu_he_shan_ben_qi_chao_biao_ri_qi` | 最近一次抄表日期 | — |
-| 上期抄表日期 | `sensor.he_shan_bei_kong_shui_wu_he_shan_shang_qi_chao_biao_ri_qi` | 上一次抄表日期 | — |
-| 本期读数 | `sensor.he_shan_bei_kong_shui_wu_he_shan_ben_qi_du_shu` | 本期水表读数 | m³ |
-| 上期读数 | `sensor.he_shan_bei_kong_shui_wu_he_shan_shang_qi_du_shu` | 上期水表读数 | m³ |
-| 计费月份 | `sensor.he_shan_bei_kong_shui_wu_he_shan_ji_fei_yue_fen` | 最新账单对应的月份 | — |
-| 计费水量 | `sensor.he_shan_bei_kong_shui_wu_he_shan_ji_fei_shui_liang` | 本期结算用水量 | m³ |
-| 缴费状态 | `sensor.he_shan_bei_kong_shui_wu_he_shan_jiao_fei_zhuang_tai` | 最新账单缴费状态 | — |
-| Token 状态 | `sensor.he_shan_bei_kong_shui_wu_he_shan_token_zhuang_tai` | 当前 Token 是否有效 | — |
 
 
 ## 配置选项
