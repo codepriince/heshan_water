@@ -1,0 +1,35 @@
+{
+  "title": "鹤山北控水务",
+  "config": {
+    "step": {
+      "user": {
+        "title": "鹤山北控水务",
+        "description": "请填写从微信小程序抓包获取的登录信息",
+        "data": {
+          "username": "用户名",
+          "password": "密码",
+          "open_id": "微信 Open ID",
+          "scan_interval": "数值",
+          "scan_interval_unit": "单位"
+        }
+      }
+    },
+    "error": {
+      "auth_failed": "认证失败，请检查用户名、密码或 Open ID",
+      "no_binding": "未找到绑定用水户号",
+      "network_error": "网络连接失败"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "更新设置",
+        "description": "配置数据更新规则",
+        "data": {
+          "scan_interval": "数值",
+          "scan_interval_unit": "单位"
+        }
+      }
+    }
+  }
+}

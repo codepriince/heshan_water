@@ -1,0 +1,11 @@
+{
+  "domain": "hsbc_water",
+  "name": "鹤山北控水务",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/codepriince/hsbc_water",
+  "requirements": [],
+  "codeowners": ["@codepriince"],
+  "integration_type": "device",
+  "iot_class": "cloud_polling"
+}
