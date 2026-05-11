@@ -14,7 +14,7 @@ HA上查看抄表读数、欠费、计费水量等信息。
 
 * ✅ 自动登录获取 Token，无需手动填写动态令牌
 * ✅ 支持灵活的数据更新频率：小时、天、周、月
-* ✅ 提供欠费金额、上期/本期读数、计费月份、缴费状态等传感器
+* ✅ 提供欠费金额、上期/本期读数等传感器
 
 ## 安装
 
@@ -34,13 +34,13 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 ## 配置
 
 ### 第一步：获取认证参数
-登录微信 **鹤山北控水务** 小程序，使用抓包工具获取以下参数：
+使用抓包工具获取以下参数：
 
 | 参数 | 说明 | 抓包来源 |
 |------|------|----------|
-| `username` | 用户名 | 请求体 (`/wechat/get_token`) |
-| `password` | 密码 | 请求体 (`/wechat/get_token`) |
-| `open_id` | 用户唯一标识 | 请求体 (`/wechat/getopen_id`) |
+| `username` | 用户名 | 请求体 (`get_token`) |
+| `password` | 密码 | 请求体 (`get_token`) |
+| `open_id` | 用户唯一标识 | 请求体 (`getopen_id`) |
 
 > **注意：** `open_id` 是小程序分配给当前微信用户的固定 ID，更换微信账号后需要重新获取。
 
@@ -69,7 +69,7 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 
 ### 无法连接或认证失败
 * 确认用户名、密码、open_id 完全与抓包时一致。
-* 查看 HA 日志（配置 → 系统 → 日志），搜索 `heshan_water` 获取详细错误信息。
+* 查看 HA 日志（配置 → 系统 → 日志），搜索 `hsbc_water` 获取详细错误信息。
 * 检查 Home Assistant 主机能否访问 `http://XXX.XXX.XXX.XXX:端口号`（可在HA终端使用命令 `curl http://XXX.XXX.XXX.XXX:端口号` 测试）。
 
 
