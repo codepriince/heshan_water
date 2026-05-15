@@ -80,6 +80,9 @@ cp -r hsbc_water ~/.homeassistant/custom_components/
 * 🚀 自动获取 Token 功能，无需手动填写动态令牌
 * ✨ 支持灵活的数据更新频率（小时/天/周/月）
 
+<img width="718" height="1030" alt="image" src="https://github.com/user-attachments/assets/721b06dd-f264-442e-9959-5479d70240b2" />
+
+
 
 
 
